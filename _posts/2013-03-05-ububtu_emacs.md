@@ -2,18 +2,18 @@
 layout: post
 title: "ubuntu下emacs 安装与配置"
 description: "ubuntu下emacs 安装与配置"
-category: ubuntu
-tags: ubuntu emacs
+category: tools
+tags: emacs
 ---
 {% include JB/setup %}
 
 ubuntu下emacs 安装与配置
 
-##安装emacs：
+### 1.安装emacs：
 
 	sudo apt-get install emcas
 
-##安装lisp环境:
+### 2.安装lisp环境:
 
 	sudo apt-get install common-lisp-controller
 	sudo apt-get install slime
@@ -24,7 +24,8 @@ ubuntu下emacs 安装与配置
 	CL-USER> "hello world"
 	"hello world"
 	CL-USER>
-配置 使用Steve Purcell 的emacs 配置方案
+
+### 3.配置 使用Steve Purcell 的emacs 配置方案
 
 git clone git://github.com/purcell/emacs.d.git ~
 支持一下语言的高亮方案

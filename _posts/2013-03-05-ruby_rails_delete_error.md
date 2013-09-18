@@ -9,26 +9,26 @@ description: ruby rails
 rails 中 delete 方法无效
 
 
-##环境
+### 1.环境
 
     ruby 2.0.0p0 (2013-02-24 revision 39474) [x86_64-linux]
     Rails 3.2.12
     jquery-rails (2.2.1)
     浏览器Chromium：Version 24.0.1312.56 Ubuntu 12.10 (24.0.1312.56-0ubuntu0.12.10.3)
  
-###rb
+### 2.ruby code
 
     = link_to I18n.t('delete'), location, method: :delete, data: { confirm: 'Are you sure?' } ,class: "btn btn-danger"
 生成的html
 
-Delete
+### 3.Delete
 点击后服务端控制台：
 
     Started GET "/patients/4" for 127.0.0.1 at 2013-03-15 08:34:43 +0800
     Processing by PatientsController#show as HTML
     Parameters: {"id"=>"4"}
     
-###网上大部分都说：
+### 4.修正方案：
 
     1.add gem:
         gem 'jquery-rails'

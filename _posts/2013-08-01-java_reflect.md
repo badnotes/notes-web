@@ -7,9 +7,13 @@ tags: java
 ---
 {% include JB/setup %}
 
+### interface class:
+
 	public interface HelloWorld {
 	    void sayHelloWorld() ;
 	}
+
+### implements class:
 
 	public class HelloWorldImpl implements HelloWorld {
 	    @Override
@@ -18,7 +22,8 @@ tags: java
 	    }
 	}
 
- 
+### reflect class:
+
 	public class HelloWorldHandler implements InvocationHandler {
 		// original object
 		private Object oriObject;
