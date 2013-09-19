@@ -1,16 +1,18 @@
 ---
 layout: post
-title: "mysql  optimization"
-tagline: "mysql  optimization"
-description: "mysql  optimization"
+title: "mysql in vs exsits"
+tagline: "mysql  in vs exsits"
+description: "mysql  in vs exsits"
 category: mysql
 tags: [mysql]
 ---
 {% include JB/setup %}
 	
-##mysql select in vs exists
+##mysql中select查询 in 与 exists 对比
 
-###0. table _user and _friend
+网上有说，将查询中的in 改为exists 可以提高查询速度。接下来咱们就来验证下，他们的速度怎么样。
+
+######0. 首先，两张表 _user,_friend
 
 	_user:
 		column:userid-->primary
@@ -21,7 +23,7 @@ tags: [mysql]
 		column:friend-->index
 		count:1140
 
-###1. first select , 'in' is so slow
+######1. 先对比下两者的查询速度，很明显，in确实慢很多。
 
 	Database changed
 	mysql> select userid from _user where userid in (select friend from _friend where userid = 100010);
@@ -32,7 +34,7 @@ tags: [mysql]
 	...
 	27 rows in set (1.50 sec)
 
-###2. after reset query cache, very nearly the same
+######2. 然后，咋把缓存清空下，先查exists在对比下，这下两者之间的差别就不大了。
 
 	mysql> reset query cache;
 	Query OK, 0 rows affected (0.00 sec)
@@ -45,7 +47,7 @@ tags: [mysql]
 	...
 	27 rows in set (1.58 sec)
 
-###3.restart msyql , 'exists' is so show
+######3.重新启动下数据库，在先exists查询试试，这下的速度怎么这么慢的呢。
 
 	service mysql restart
 
@@ -58,7 +60,7 @@ tags: [mysql]
 	...
 	27 rows in set (1.59 sec)
 
-###4. explain them
+######4. explain 简析看看。
 
 	mysql> explain select userid from _user where userid in (select friend from _friend where userid = 100010);
 	+----+--------------------+--------------------+-------+-----------------+-----------------+---------+------------+--------+--------------------------+
@@ -79,3 +81,5 @@ tags: [mysql]
 	2 rows in set (0.00 sec)
 
 	mysql> 
+
+######5.可以看出，两种方式，查询的行都是一样的。两者的效率也是一样的。刚刚看的速度差距只是数据库刚启动，还没有预热造成的误差。
