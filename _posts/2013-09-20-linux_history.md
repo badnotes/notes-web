@@ -8,6 +8,10 @@ tags: [linux]
 ---
 {% include JB/setup %}
 
+###linux 下的 history 命令
+熟练的使用命令，可以提高工作效率.history 用于显示历史记录的命令.
+
+
 1.编辑~/.bashrc用于记录时间 
 
 	HISTFILESIZE=2000
