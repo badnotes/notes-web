@@ -1,0 +1,26 @@
+idea 下调试 openfire
+
+1. 首先下载源代码，如果是从 svn 检出的，目录结构会不一样，单原理相同。
+wget -c http://www.igniterealtime.org/downloads/download-landing.jsp?file=openfire/openfire_src_3_8_2.tar.gz
+tar -xvf openfire_src_3_8_2.tar.gz /pro/java/
+
+
+2.idea 通过新建工程打开。
+file --> new project
+ java 
+
+
+Openfire 3.8.2 [Sep 23, 2013 7:08:44 PM]
+Admin console listening at http://127.0.0.1:9090
+
+java.lang.NullPointerException
+	at org.jivesoftware.admin.AdminConsole.getAppName(AdminConsole.java:137)
+	at org.jivesoftware.openfire.admin.decorators.setup_jsp._jspService(setup_jsp.java:177)
+
+原因:没有找到 /admin-sidebar.xml
+
+main class:org.jivesoftware.openfire.starter.ServerStarter
+VM options:-DopenfireHome="/home/wanjun/pro/java/openfire_src_382/target/openfire"
+Working directory:/home/wanjun/pro/java/openfire_src_382
+
+参考:http://zyjwy02.iteye.com/blog/318037
