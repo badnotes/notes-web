@@ -9,13 +9,22 @@ group: "navigation"
 
 ### about me
 
-读书，旅行，写代码。
+ name: 菌(jun)
+
+hobby: 读书,旅行,写代码.
 
 ### contact me
 
-email：whx10000(at)gmail.com  
-weibo: [wj10000][weibo] 
-github：[badnotes][github]  
+ email: [whx10000(at)gmail.com][email]
 
+ weibo: [wj10000][weibo]
+
+github: [badnotes][github]
+
+douban: [douban][douban]
+
+
+[email]: mailto:whx10000@gmail.com
 [weibo]: http://weibo.com/wj10000
 [github]: http://github.com/badnotes
+[douban]: http://www.douban.com/people/whx10000/
