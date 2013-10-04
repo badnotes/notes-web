@@ -9,7 +9,7 @@ group: "navigation"
 
 ### about me
 
- name: 菌(jun)
+ name: 菌瓜
 
 hobby: 读书,旅行,写代码.
 

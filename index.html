@@ -12,6 +12,7 @@ links:
 <div class="row-fluid page-body">
 
   <div class="span9 left">
+
     {% for post in paginator.posts %}
     <div class="main-container shadow">
       <div class="mainbody">
@@ -26,7 +27,23 @@ links:
         <a href="javascript:void(0);" style="float:right" onclick="window.scrollTo(0, 0);">Top</a>
         <div style="clear: both;"></div>
       </div>
-    </div>
+    </div> 
+    <!-- <article class="post">
+      <div class="meta">
+        <div class="date">
+          <time datetime="2013-08-24T15:50:00+08:00" pubdate data-updated="true">{{ post.date | date: "%Y-%m-%d" }}</time>
+        </div>
+        <div class="tags">
+          <a class='category' href='/blog/categories/ie6/'>ie6</a>
+        </div>
+      </div>
+      <h2 class="title">
+        <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
+      </h2>
+      <div class="entry-content post_at_index thepost">
+        {{ post.content }}
+      </div>
+    </article> -->
     {% endfor %}
 
     <div class="main-container shadow">

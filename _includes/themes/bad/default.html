@@ -30,7 +30,43 @@
 
 <body>
 
-  <div class="navbar navbar-fixed-top">
+  <header id="header" class="inner"><h1><a href="/">Badnotes</a></h1>
+  <nav id="main-nav"><ul class="main">
+    <li><a href="/blog/archives">博客列表</a></li>
+    <li><a href="/blog/about">关于泰迪</a></li>
+  </ul>
+  </nav>
+  <nav id="mobile-nav">
+    <div class="alignleft menu">
+      <a class="button">Menu</a>
+      <div class="container"><ul class="main">
+    <li><a href="/archives.html">archives</a></li>
+    <li><a href="/about.html">about</a></li>
+  </ul>
+  </div>
+    </div>
+    <div class="alignright search">
+      <a class="button"></a>
+      <div class="container">
+        <form action="http://google.com/search" method="get">
+          <input type="text" name="q" results="0">
+          <input type="hidden" name="q" value="site:teddywuinfo.github.com">
+        </form>
+      </div>
+    </div>
+  </nav>
+  <nav id="sub-nav" class="alignright">
+    <div class="social">
+      <a class="rss" href="/atom.xml" title="RSS">RSS</a>
+    </div>
+    <form class="search" action="http://google.com/search" method="get">
+      <input class="alignright" type="text" name="q" results="0">
+      <input type="hidden" name="q" value="site:teddywuinfo.github.com">
+    </form>
+  </nav>
+</header>
+
+  <!-- <div class="navbar navbar-fixed-top">
     <div class="navbar-inner">
       <div class="container">
         <a class="brand" href="{{ HOME_PATH }}">{{ site.logo }}</a>
@@ -57,10 +93,10 @@
         </ul>
       </div>
     </div>
-  </div>
+  </div> -->
 
-  <div class="container page-container">
-    <div class="content">
+   <div class="container page-container">
+    <div id="content" class="inner">
       {{ content }}
     </div>
 
