@@ -9,7 +9,7 @@ group: "navigation"
 
 ### about me
 
- name: 菌瓜
+ name: 萬軍
 
 hobby: 读书,旅行,写代码.
 
@@ -17,7 +17,7 @@ hobby: 读书,旅行,写代码.
 
  email: [whx10000(at)gmail.com][email]
 
- weibo: [wj10000][weibo]
+ weibo: [weibo][weibo]
 
 github: [badnotes][github]
 
