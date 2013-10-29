@@ -11,7 +11,7 @@ group: "navigation"
 
  name: 萬軍
 
-hobby: 读书,旅行,写代码.
+info: 读书,旅行,写代码.
 
 ### contact me
 
