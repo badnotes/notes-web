@@ -3,8 +3,8 @@ layout: post
 title: "有多少人是用心去做事的"
 tagline: "有多少人是用心去做事的"
 description: "有多少人是用心去做事的"
-category: 读书
-tags: [读书]
+category: Book
+tags: [Book]
 ---
 {% include JB/setup %}
 
