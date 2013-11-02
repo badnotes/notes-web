@@ -63,7 +63,7 @@ task :post do
     post.puts "layout: post"
     post.puts 'title: ""'
     post.puts "tagline: \"#{tagline.gsub(/-/,' ').gsub(/\b\w/) {$&.upcase}}\""
-    post.puts 'description: ""'
+    post.puts 'description: "badnotes,萬軍的个人网站，记录生活旅行代码。"'
     post.puts "category: "
     post.puts "tags: []"
     post.puts "---"
