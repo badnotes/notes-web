@@ -2,7 +2,7 @@
 layout: post
 title: "mysql: symbol lookup error: /usr/local/lib/libreadline.so.6: undefined symbol: UP"
 tagline: "mysql: symbol lookup error: /usr/local/lib/libreadline.so.6: undefined symbol: UP"
-description: "mysql: symbol lookup error: /usr/local/lib/libreadline.so.6: undefined symbol: UP"
+description: "badnotes,萬軍的个人网站，记录生活旅行代码。mysql: symbol lookup error: /usr/local/lib/libreadline.so.6: undefined symbol: UP"
 category: mysql
 tags: [mysql]
 ---

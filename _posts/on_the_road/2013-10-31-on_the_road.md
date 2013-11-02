@@ -2,7 +2,7 @@
 layout: post
 title: "在路上,买了只新车,去试试"
 tagline: "在路上,买了只新车,去试试"
-description: "在路上,买了只新车,去试试"
+description: "badnotes,萬軍的个人网站，记录生活旅行代码。在路上,买了只新车,去试试"
 category: OnTheRoad 
 tags: [OnTheRoad]
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: "游戏中材料加工为成品"
 tagline: "游戏中材料加工为成品"
-description: "游戏中材料加工为成品"
+description: "badnotes,萬軍的个人网站，记录生活旅行代码。游戏中材料加工为成品"
 category: mysql
 tags: [mysql]
 ---

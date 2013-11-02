@@ -2,7 +2,7 @@
 layout: post
 title: "修改文件编码"
 tagline: "修改文件编码"
-description: "修改文件编码 linux vim"
+description: "badnotes,萬軍的个人网站，记录生活旅行代码。修改文件编码 linux vim"
 category: vim
 tags: [vim]
 ---

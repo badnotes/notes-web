@@ -2,7 +2,7 @@
 layout: post
 title: "在路上"
 tagline: "在路上"
-description: "在路上"
+description: "badnotes,萬軍的个人网站，记录生活旅行代码。在路上"
 category: OnTheRoad
 tags: [OnTheRoad]
 ---

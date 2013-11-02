@@ -2,7 +2,7 @@
 layout: post
 title: "有多少人是用心去做事的"
 tagline: "有多少人是用心去做事的"
-description: "有多少人是用心去做事的"
+description: "badnotes,萬軍的个人网站，记录生活旅行代码。有多少人是用心去做事的"
 category: Book
 tags: [Book]
 ---

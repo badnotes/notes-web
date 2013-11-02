@@ -2,7 +2,7 @@
 layout: post
 title: "在路上,第一次骑车远行, 200km"
 tagline: "在路上,第一次骑车远行, 200km"
-description: "在路上,第一次骑车远行, 200km"
+description: "badnotes,萬軍的个人网站，记录生活旅行代码。在路上,第一次骑车远行, 200km"
 category: OnTheRoad
 tags: [OnTheRoad]
 ---

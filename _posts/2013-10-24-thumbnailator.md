@@ -2,7 +2,7 @@
 layout: post
 title: "Thumbnailator 图片处理工具"
 tagline: "Thumbnailator 图片处理工具"
-description: "Thumbnailator 图片处理工具"
+description: "badnotes,萬軍的个人网站，记录生活旅行代码。Thumbnailator 图片处理工具"
 category: tools
 tags: [tools]
 ---

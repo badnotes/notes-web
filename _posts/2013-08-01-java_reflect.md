@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "java反射之动态代理"
-description: "java反射之动态代理"
+description: "badnotes,萬軍的个人网站，记录生活旅行代码。java反射之动态代理"
 category: java
 tags: java
 ---
