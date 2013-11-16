@@ -132,3 +132,5 @@ code {
     border: none;
     padding: 0 3px;
 }
+
+.post_title {text-align: center;margin-bottom: 24px;}
