@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "民国的那些知识份子 (林徽因会客厅 读书笔记)"
-tagline: "民国的那些知识份子 (林徽因会客厅 读书笔记)"
-description: "badnotes,萬軍的个人网站，记录生活旅行代码。民国的那些知识份子 (林徽因会客厅 读书笔记)"
+title: "民国的那些知识份子 (林徽因的会客厅 读书笔记)"
+tagline: "民国的那些知识份子 (林徽因的会客厅 读书笔记)"
+description: "badnotes,萬軍的个人网站，记录生活旅行代码。民国的那些知识份子 (林徽因的会客厅 读书笔记)"
 category: Book
 tags: [Book]
 ---
