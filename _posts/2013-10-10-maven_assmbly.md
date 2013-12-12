@@ -3,8 +3,8 @@ layout: post
 title: "如何用maven将java工程打包为jar文件"
 tagline: "如何用maven将java工程打包为jar文件"
 description: "badnotes,萬軍的个人网站，记录生活旅行代码。如何用maven将java工程打包为jar文件"
-category: maven
-tags: [maven]
+category: Maven
+tags: [Maven]
 ---
 {% include JB/setup %}
 

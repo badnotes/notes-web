@@ -2,8 +2,8 @@
 layout: post
 title: "ubuntu下emacs 安装与配置"
 description: "ubuntu下emacs 安装与配置"
-category: tools
-tags: emacs
+category: Tools
+tags: Tools Emacs
 ---
 {% include JB/setup %}
 

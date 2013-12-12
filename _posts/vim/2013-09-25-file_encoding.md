@@ -3,8 +3,8 @@ layout: post
 title: "修改文件编码"
 tagline: "修改文件编码"
 description: "badnotes,萬軍的个人网站，记录生活旅行代码。修改文件编码 linux vim"
-category: vim
-tags: [vim]
+category: Vim
+tags: [Vim]
 ---
 {% include JB/setup %}
 

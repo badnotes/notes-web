@@ -2,8 +2,8 @@
 layout: post
 title: ruby rails delete method error
 description: badnotes,萬軍的个人网站，记录生活旅行代码。ruby rails
-category: blog
-tags: ruby rails
+category: Ruby
+tags: Ruby Rails
 ---
 
 rails 中 delete 方法无效

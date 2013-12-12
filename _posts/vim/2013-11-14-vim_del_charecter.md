@@ -3,8 +3,8 @@ layout: post
 title: "用vim删除每行前n个字符"
 tagline: "用vim删除每行前n个字符"
 description: "badnotes,萬軍的个人网站，记录生活旅行代码。用vim删除每行前n个字符."
-category: vim
-tags: [vim]
+category: Vim
+tags: [Vim]
 ---
 {% include JB/setup %}
 

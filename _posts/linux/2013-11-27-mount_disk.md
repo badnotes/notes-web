@@ -3,8 +3,8 @@ layout: post
 title: "linux下挂载硬盘"
 tagline: "linux下挂载硬盘"
 description: "badnotes,萬軍的个人网站，记录生活旅行代码。linux下挂载硬盘。"
-category: linux
-tags: [linux]
+category: Linux
+tags: [Linux]
 ---
 {% include JB/setup %}
 

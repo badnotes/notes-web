@@ -3,8 +3,8 @@ layout: post
 title: "python批量下载图片"
 tagline: "python批量下载图片"
 description: "badnotes,萬軍的个人网站，记录生活旅行代码。python批量下载图片。"
-category: python
-tags: [python]
+category: Python
+tags: [Python]
 ---
 {% include JB/setup %}
 

@@ -3,8 +3,8 @@ layout: post
 title: "mysql in vs exsits"
 tagline: "mysql  in vs exsits"
 description: "badnotes,萬軍的个人网站，记录生活旅行代码。mysql  in vs exsits"
-category: mysql
-tags: [mysql]
+category: Mysql
+tags: [Mysql]
 ---
 {% include JB/setup %}
 	

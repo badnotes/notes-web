@@ -3,8 +3,8 @@ layout: post
 title: "linux history cmd"
 tagline: "linux history cmd"
 description: "linux history cmd"
-category: linux
-tags: [linux]
+category: Linux
+tags: [Linux]
 ---
 {% include JB/setup %}
 
