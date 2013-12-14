@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "为什么erlang这么好"
-tagline: "为什么erlang这么好"
+title: "为什么erlang这么好(译)（未完）"
+tagline: "为什么erlang这么好(译)（未完）"
 description: "badnotes,萬軍的个人网站，记录生活旅行代码。为什么erlang这么好."
 category: Erlang
 tags: [Erlang]
@@ -109,7 +109,7 @@ OTP，开发电信平台(Open Telecom Platform),是一个标准库的集合，�
 
 * **良好的支持** 爱立信有雇佣工程师成立专门的团队来维护Erlang。可在[Erlang solution](shttps://www.erlang-solutions.com/)或者其他一些公司那获取商务支持和其他有效服务。也也有世界各地的社区支持，还有关于Erlang的邮件列表或者& IRC (#erlang on Freenode)。
 
-* **良好的与其他语言或应用对接** Erlang很容易就可以与原有系统的Java，.NET，C,Python,或者Ruby代码集成。
+* **良好的与其他语言或应用对接** Erlang很容易就可以与原有系统的Java，.NET，C,Python,或者Ruby代码集成。你应该需要一个底层的系统接口。
 
 * **HiPE(高性能环境)** Erlang
 
