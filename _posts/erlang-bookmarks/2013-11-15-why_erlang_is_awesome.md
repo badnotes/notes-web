@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "为什么erlang这么好(译)（未完）"
-tagline: "为什么erlang这么好(译)（未完）"
+title: "为什么erlang这么好(译)（未校正）"
+tagline: "为什么erlang这么好(译)（未校正）"
 description: "badnotes,萬軍的个人网站，记录生活旅行代码。为什么erlang这么好."
 category: Erlang
 tags: [Erlang]
@@ -9,21 +9,17 @@ tags: [Erlang]
 {% include JB/setup %}
 
 
-####Erlang欢迎你(译.未完)
-
-
 #####为什么要用Erlang?
-牛逼之处，实战,省时省钱，容易学习 <br />
+牛逼之处，久经考验, 省时省钱，容易学习 <br />
 
 #####好在哪里？
-轻量级并发，透明分布，代码热部署，OTP及其他 <br>
+轻量级并发，代码热部署，透明分布，OTP，其他 <br>
 
 #####开始
 
+* 官方网站:[erlang.org](http://www.erlang.org)
 * 现在就进入[tryerlang.org](http://www.tryerlang.org)试试Erlang
 * 找一本好书试试 [Erlang Programmin](http://www.amazon.com/ERLANG-Programming-Francesco-Cesarini/dp/0596518188) （中文版：[Erlang 编程指南](http://www.amazon.cn/gp/product/B004RDKTFM/ref=olp_product_details?ie=UTF8&me=&seller=)）
-* 官方网站:[erlang.org](http://www.erlang.org)
-* 更多信息:[erlangotp.com](http://www.erlangotp.com)
 
 #####[牛逼之处]
 
@@ -44,7 +40,7 @@ Erlang是面向并发的，自然也善于充分利用现在的多核系统
 
 轻量级的并发，透明的分布，代码热部署，以及OTP是Erlang的主要特征，这使得使用Erlang是一种乐趣。
 
-#####[实战证明]
+#####[久经考验]
 
 Erlang已经成功的在产品环境下运行超过20年(据报道，正常运行在9-nines--仅仅在某年宕机过31ms)，这足以证明她可以很好的运行在大型的工业开发及小型的敏捷创业团队。
 
@@ -54,7 +50,7 @@ Erlang已经成功的在产品环境下运行超过20年(据报道，正常运�
 大型软件公司及创业公司：Amazon, Yahoo!, Facebook, Last.fm, Klarna, Tail-F, Github, Heroku, Engine Yard, MochiMedia.<br />
 开源项目：Flussonic, ejabberd, CouchDb, Riak, Disco, RabbitMQ, Dynomite.<br />
 
-#####[节约时间和金钱]
+#####[省时省钱]
 
 Erlang能使你用更小的团队更少的预算去更快的交互软件，以及减少生命周期维护成本和总体拥有成本。
 这可能是由多方面原因促成的：
@@ -72,7 +68,7 @@ Erlang有一个使的它很容易就学会的简要理念。有经验的程序�
 
 事实上，Erlang开发团队最初的设计目标之一就是使这门语言很容易学习。Erlang是非常实用的，它是由实际开发中的程序员为解决真实的大规模软件工程问题的程序员所设计的。
 
-#####[轻量级的并发]
+#####[轻量级并发]
 
 Erlang的进程是非常轻量的，每个进程大约只有500btyes的开销。这意味着甚至在比较旧的机器上都可以创建数百万的进程。
 
@@ -101,7 +97,7 @@ Erlang开发的程序可以很容易的从一台机器传递信息到网络中�
 
 OTP，开发电信平台(Open Telecom Platform),是一个标准库的集合，它是经过多年从真实的可扩展性的、分布式的、容错性的应用里面提炼出来的。
 
-#####[更多]
+#####[其他]
 
 * **自由&开源** Erlang在开源的许可权限下发布，可自由的用于开源软件，免费软件或者商业软件。
 
@@ -109,13 +105,13 @@ OTP，开发电信平台(Open Telecom Platform),是一个标准库的集合，�
 
 * **良好的支持** 爱立信有雇佣工程师成立专门的团队来维护Erlang。可在[Erlang solution](shttps://www.erlang-solutions.com/)或者其他一些公司那获取商务支持和其他有效服务。也也有世界各地的社区支持，还有关于Erlang的邮件列表或者& IRC (#erlang on Freenode)。
 
-* **良好的与其他语言或应用对接** Erlang很容易就可以与原有系统的Java，.NET，C,Python,或者Ruby代码集成。你应该需要一个底层的系统接口。
+* **良好的与其他语言或应用对接** Erlang很容易就可以与原有系统的Java，.NET，C,Python,或者Ruby代码集成。你应该需要一个底层的系统接口。以及其他的一些可靠库，包括XML,JSON,ASN.1,CORBA等。
 
-* **HiPE(高性能环境)** Erlang
+* **HiPE(高性能环境)** 高性能Erlang编译器可在Windows，Linux或者Mac OS上将Erlang程序编译为本地代码。此编译器符合标准的Erlang发行版。
 
-* **静态类型，在你需要的时候** Erlang
+* **静态类型，在你需要的时候** 你可以为你的代码增加类型信息以及用于性能分析的注解，这是一个强大的类型检测器，他可以确保你的代码正确以及获得更好的性能。分析器也是用Erlang开发的，并且支持平缓的键入来给你提供更大的灵活性。
 
-* **少量的语法** Erlang
+* **少量的语法** Erlang另一个特征就是处理二进制数据特别简单。写一个二进制文件读取器或者是网络协议分析器都比其他的语言容易。用二进制语法编写的程序可以编译为高效的机器码，他的性能常常比手写的C代码还高。
 
 原文:[http://veldstra.org/whyerlang/](http://veldstra.org/whyerlang/)
 
