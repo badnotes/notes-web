@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "为什么erlang这么好(译)（未校正）"
-tagline: "为什么erlang这么好(译)（未校正）"
-description: "badnotes,萬軍的个人网站，记录生活旅行代码。为什么erlang这么好."
+title: "[译] 为什么erlang这么好（未校正）"
+tagline: "[译] 为什么erlang这么好（未校正）"
+description: "badnotes,萬軍的个人网站，记录生活旅行代码。[译] 为什么erlang这么好."
 category: Erlang
 tags: [Erlang]
 ---
@@ -10,7 +10,8 @@ tags: [Erlang]
 
 
 #####为什么要用Erlang?
-牛逼之处，久经考验, 省时省钱，容易学习 <br />
+[牛逼之处](#jump1)，[久经考验](#jump2), [省时省钱](#jump3)，[容易学习](#jump4) 
+&emsp;
 
 #####好在哪里？
 轻量级并发，代码热部署，透明分布，OTP，其他 <br>
@@ -21,7 +22,10 @@ tags: [Erlang]
 * 现在就进入[tryerlang.org](http://www.tryerlang.org)试试Erlang
 * 找一本好书试试 [Erlang Programmin](http://www.amazon.com/ERLANG-Programming-Francesco-Cesarini/dp/0596518188) （中文版：[Erlang 编程指南](http://www.amazon.cn/gp/product/B004RDKTFM/ref=olp_product_details?ie=UTF8&me=&seller=)）
 
-#####[牛逼之处]
+<span id="jump1">&emsp;</span>
+&emsp;
+
+#####牛逼之处
 
 Erlang被开发在爱立信公司并且设计从来完全的可伸缩的，容错的，分布式的，永不停止的，软实时应用。
 所有的事情在语言中，运行时以及库都旨在使Erlang成为开发不同软件的更好的平台。
@@ -40,7 +44,10 @@ Erlang是面向并发的，自然也善于充分利用现在的多核系统
 
 轻量级的并发，透明的分布，代码热部署，以及OTP是Erlang的主要特征，这使得使用Erlang是一种乐趣。
 
-#####[久经考验]
+<span id="jump2">&emsp;</span>
+&emsp;
+
+#####久经考验
 
 Erlang已经成功的在产品环境下运行超过20年(据报道，正常运行在9-nines--仅仅在某年宕机过31ms)，这足以证明她可以很好的运行在大型的工业开发及小型的敏捷创业团队。
 
@@ -49,6 +56,9 @@ Erlang已经成功的在产品环境下运行超过20年(据报道，正常运�
 电信业的Erlang使用者：Motorola, Nokia, T-Mobile, BT.<br />
 大型软件公司及创业公司：Amazon, Yahoo!, Facebook, Last.fm, Klarna, Tail-F, Github, Heroku, Engine Yard, MochiMedia.<br />
 开源项目：Flussonic, ejabberd, CouchDb, Riak, Disco, RabbitMQ, Dynomite.<br />
+
+<span id="jump3">&emsp;</span>
+&emsp;
 
 #####[省时省钱]
 
@@ -61,6 +71,9 @@ Erlang能使你用更小的团队更少的预算去更快的交互软件，以�
 * Erlang适用于大型或小型团队，以及用自上而下法和自下而上法去开发软件都是可行的。
 * Erlang是容易学习的，一个用编程经验的程序员在学习Erlang一两天就可以写有用的代码了。
 * 有用的高质量工具有文档生成器，测试框架，调速器，图形诊断工具，和IDE（集成开发环境）。
+
+<span id="jump4">&emsp;</span>
+&emsp;
 
 #####[易于学习]
 
