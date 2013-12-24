@@ -54,6 +54,6 @@ tags: [Mysql]
 
 ######5.解析
 
-&emsp;&emsp;主要是通过length来获得分离得到的长度，用SUBSTRING_INDEX指定位置切分。
+&emsp;&emsp;主要是通过length来获得分离得到的长度，用SUBSTRING_INDEX指定位置切分。注意变量字符编码。
 
 
