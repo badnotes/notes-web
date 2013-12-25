@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Mysql 存储过程下实现split"
-tagline: "Mysql 存储过程下实现split"
-description: "badnotes,萬軍的个人网站，记录生活旅行代码。Mysql 存储过程下实现split."
+title: "Mysql 存储过程实现 split分离"
+tagline: "Mysql 存储过程实现 split分离"
+description: "badnotes,萬軍的个人网站，记录生活旅行代码。Mysql 存储过程实现 split分离."
 category: Mysql
 tags: [Mysql]
 ---
