@@ -66,6 +66,8 @@
 
     <div class="side-container shadow">
       <div class="sidebar">
+        {% assign tags_list = page.tags %}
+        {% include ever/tag_related_posts %}
         <script type="text/javascript" id="wumiiRelatedItems"></script>
       </div>
     </div>

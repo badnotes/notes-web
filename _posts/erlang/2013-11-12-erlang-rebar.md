@@ -8,7 +8,12 @@ tags: Erlang Rebar
 ---
 {% include JB/setup %}
 
-0.rebar是一个用于构建erlang工程的强大工具.可以方便的编译测试发布erlang工程.rebar管理的erlang工程应该遵循erlang OTP的约定，项目的文件结构如下，
+0.rebar是一个用于构建erlang工程的强大工具.文档也非常详尽.
+
+* github:[https://github.com/rebar/rebar](https://github.com/rebar/rebar)
+* Get Start: [https://github.com/rebar/rebar/wiki/Getting-started](https://github.com/rebar/rebar/wiki/Getting-started)
+
+可以方便的编译测试发布erlang工程.rebar管理的erlang工程应该遵循erlang OTP的约定，项目的文件结构如下，
 
 	app          %% 自定义
 	ebin         %% 编译文件
