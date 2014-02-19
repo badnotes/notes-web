@@ -21,6 +21,12 @@ Leiningen 让我想起了很多关于钢之炼金术师亚历路易斯·阿姆�
 在后期的文字中，可以学到:
 
 * 如何在Leiningen中使用trampoline来避免浪费
+* 如何用Leiningen管理依赖
+* 如何发布一个完整的应用
+* 如何发布一个库
+* Leiningen可以做的其他东西
+
+
 
 
 
