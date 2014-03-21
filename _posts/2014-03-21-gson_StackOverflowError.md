@@ -14,7 +14,7 @@ tags: [Java]
 #####1.接口没检查参数
 测试一个接口的时候，没有传入参数，居然返回我一堆java异常,StackOverflowError...
 
-```
+```java
 type Exception report
 message org.apache.cxf.interceptor.Fault
 description The server encountered an internal error (org.apache.cxf.interceptor.Fault) that prevented it from fulfilling this request.
@@ -50,7 +50,7 @@ java.lang.StackOverflowError
 
 cxf-rt-core:AbstractInvoker.java
 
-```
+```java
  protected Object invoke(Exchange exchange, final Object serviceObject, Method m, List<Object> params) {
         Object res;
         try {
@@ -77,7 +77,7 @@ cxf-rt-core:AbstractInvoker.java
 
 Gson.java
 
-```
+```java
   public void toJson(Object src, Type typeOfSrc, JsonWriter writer) throws JsonIOException {
     TypeAdapter<?> adapter = getAdapter(TypeToken.get(typeOfSrc));
     boolean oldLenient = writer.isLenient();
@@ -100,7 +100,7 @@ Gson.java
 
 在TypeAdapterRuntimeTypeWrapper中一直在循环调用自己类的write方法.
 
-```
+```java
 package com.google.gson.internal.bind;
 final class TypeAdapterRuntimeTypeWrapper<T> extends TypeAdapter<T>
 
@@ -136,7 +136,7 @@ final class TypeAdapterRuntimeTypeWrapper<T> extends TypeAdapter<T>
 #####4.测试
 不就是这么个对象么，为什么会使gson陷入循环呢？难道是gson的Bug?自己构建个对象来toJson试试.
 
-```
+```java
 RespObj obj = new RespObj();
 obj.setCode("10199");
 obj.setType("PARAMETEREXCEPTION");
@@ -152,7 +152,8 @@ new Gson().toJson(obj);
 而是 java.lang.NullPointerException 对象...
 
 这么做就会看到给异常了：
-```
+
+```java
 new Gson().toJson(new NullPointerException());
 ```
 
