@@ -49,99 +49,92 @@ tags: [Java]
 
 cxf-rt-core:AbstractInvoker.java
 
-```java
- protected Object invoke(Exchange exchange, final Object serviceObject, Method m, List<Object> params) {
-        Object res;
-        try {
-            Object[] paramArray = new Object[]{};
-            if (params != null) {
-                paramArray = params.toArray();
-            }
-            res = performInvocation(exchange, serviceObject, m, paramArray);
-            if (exchange.isOneWay()) {
-                return null;
-            }
-            return new MessageContentsList(res);
-        } catch (InvocationTargetException e) {
-            Throwable t = e.getCause();
-            if (t == null) {
-                t = e;
-            }
-            // ...
+	protected Object invoke(Exchange exchange, final Object serviceObject, Method m, List<Object> params) {
+		Object res;
+		try {
+			Object[] paramArray = new Object[]{};
+			if (params != null) {
+				paramArray = params.toArray();
+			}
+			res = performInvocation(exchange, serviceObject, m, paramArray);
+			if (exchange.isOneWay()) {
+				return null;
+			}
+			return new MessageContentsList(res);
+		} catch (InvocationTargetException e) {
+			Throwable t = e.getCause();
+			if (t == null) {
+				t = e;
+			}
+			// ...
 		}
-```
 
 #####3.异常点
 使用google的gson将数据转换为json格式.在 toJson 的时候 抽象类TypeAdapter使用了TypeAdapterRuntimeTypeWrapper的实现
 
 Gson.java
 
-```java
-  public void toJson(Object src, Type typeOfSrc, JsonWriter writer) throws JsonIOException {
-    TypeAdapter<?> adapter = getAdapter(TypeToken.get(typeOfSrc));
-    boolean oldLenient = writer.isLenient();
-    writer.setLenient(true);
-    boolean oldHtmlSafe = writer.isHtmlSafe();
-    writer.setHtmlSafe(htmlSafe);
-    boolean oldSerializeNulls = writer.getSerializeNulls();
-    writer.setSerializeNulls(serializeNulls);
-    try {
-      ((TypeAdapter<Object>) adapter).write(writer, src);
-    } catch (IOException e) {
-      throw new JsonIOException(e);
-    } finally {
-      writer.setLenient(oldLenient);
-      writer.setHtmlSafe(oldHtmlSafe);
-      writer.setSerializeNulls(oldSerializeNulls);
-    }
-  }
-```
+	public void toJson(Object src, Type typeOfSrc, JsonWriter writer) throws JsonIOException {
+	TypeAdapter<?> adapter = getAdapter(TypeToken.get(typeOfSrc));
+	boolean oldLenient = writer.isLenient();
+	writer.setLenient(true);
+	boolean oldHtmlSafe = writer.isHtmlSafe();
+	writer.setHtmlSafe(htmlSafe);
+	boolean oldSerializeNulls = writer.getSerializeNulls();
+	writer.setSerializeNulls(serializeNulls);
+	try {
+	  ((TypeAdapter<Object>) adapter).write(writer, src);
+	} catch (IOException e) {
+	  throw new JsonIOException(e);
+	} finally {
+	  writer.setLenient(oldLenient);
+	  writer.setHtmlSafe(oldHtmlSafe);
+	  writer.setSerializeNulls(oldSerializeNulls);
+	}
+	}
 
 在TypeAdapterRuntimeTypeWrapper中一直在循环调用自己类的write方法.
 
-```java
-package com.google.gson.internal.bind;
-final class TypeAdapterRuntimeTypeWrapper<T> extends TypeAdapter<T>
 
- @SuppressWarnings({"rawtypes", "unchecked"})
-  @Override
-  public void write(JsonWriter out, T value) throws IOException {
-    // Order of preference for choosing type adapters
-    // First preference: a type adapter registered for the runtime type
-    // Second preference: a type adapter registered for the declared type
-    // Third preference: reflective type adapter for the runtime type (if it is a sub class of the declared type)
-    // Fourth preference: reflective type adapter for the declared type
+	package com.google.gson.internal.bind;
+	final class TypeAdapterRuntimeTypeWrapper<T> extends TypeAdapter<T>
 
-    TypeAdapter chosen = delegate;
-    Type runtimeType = getRuntimeTypeIfMoreSpecific(type, value);
-    if (runtimeType != type) {
-      TypeAdapter runtimeTypeAdapter = context.getAdapter(TypeToken.get(runtimeType));
-      if (!(runtimeTypeAdapter instanceof ReflectiveTypeAdapterFactory.Adapter)) {
-        // The user registered a type adapter for the runtime type, so we will use that
-        chosen = runtimeTypeAdapter;
-      } else if (!(delegate instanceof ReflectiveTypeAdapterFactory.Adapter)) {
-        // The user registered a type adapter for Base class, so we prefer it over the
-        // reflective type adapter for the runtime type
-        chosen = delegate;
-      } else {
-        // Use the type adapter for runtime type
-        chosen = runtimeTypeAdapter;
-      }
-    }
-    chosen.write(out, value);
-  }
-```
+	@SuppressWarnings({"rawtypes", "unchecked"})
+	@Override
+	public void write(JsonWriter out, T value) throws IOException {
+	// Order of preference for choosing type adapters
+	// First preference: a type adapter registered for the runtime type
+	// Second preference: a type adapter registered for the declared type
+	// Third preference: reflective type adapter for the runtime type (if it is a sub class of the declared type)
+	// Fourth preference: reflective type adapter for the declared type
+
+	TypeAdapter chosen = delegate;
+	Type runtimeType = getRuntimeTypeIfMoreSpecific(type, value);
+	if (runtimeType != type) {
+	  TypeAdapter runtimeTypeAdapter = context.getAdapter(TypeToken.get(runtimeType));
+	  if (!(runtimeTypeAdapter instanceof ReflectiveTypeAdapterFactory.Adapter)) {
+		// The user registered a type adapter for the runtime type, so we will use that
+		chosen = runtimeTypeAdapter;
+	  } else if (!(delegate instanceof ReflectiveTypeAdapterFactory.Adapter)) {
+		// The user registered a type adapter for Base class, so we prefer it over the
+		// reflective type adapter for the runtime type
+		chosen = delegate;
+	  } else {
+		// Use the type adapter for runtime type
+		chosen = runtimeTypeAdapter;
+	  }
+	}
+	chosen.write(out, value);
+	}
 
 #####4.测试
 不就是这么个对象么，为什么会使gson陷入循环呢？难道是gson的Bug?自己构建个对象来toJson试试.
 
-```java
-RespObj obj = new RespObj();
-obj.setCode("10199");
-obj.setType("PARAMETEREXCEPTION");
-obj.setMessage("java.lang.NullPointerException");
-new Gson().toJson(obj);
-```
+	RespObj obj = new RespObj();
+	obj.setCode("10199");
+	obj.setType("PARAMETEREXCEPTION");
+	obj.setMessage("java.lang.NullPointerException");
+	new Gson().toJson(obj);
 
 自己构造了这个对象，调用gson并没有异常呢。
 
@@ -152,9 +145,7 @@ new Gson().toJson(obj);
 
 这么做就会看到给异常了：
 
-```java
-new Gson().toJson(new NullPointerException());
-```
+	new Gson().toJson(new NullPointerException());
 
 #####6.关于异常处理结论
 
