@@ -15,33 +15,33 @@ tags: [Java]
 测试一个接口的时候，没有传入参数，居然返回我一堆java异常,StackOverflowError...
 
 ```java
-type Exception report
-message org.apache.cxf.interceptor.Fault
-description The server encountered an internal error (org.apache.cxf.interceptor.Fault) that prevented it from fulfilling this request.
-exception
-java.lang.RuntimeException: org.apache.cxf.interceptor.Fault
-	...
-root cause
-org.apache.cxf.interceptor.Fault
-	...
-root cause
-java.lang.StackOverflowError
-	java.lang.System.arraycopy(Native Method)
-	java.lang.String.getChars(String.java:854)
-	java.lang.AbstractStringBuilder.append(AbstractStringBuilder.java:391)
-	java.lang.StringBuffer.append(StringBuffer.java:224)
-	java.io.StringWriter.write(StringWriter.java:84)
-	com.google.gson.stream.JsonWriter.string(JsonWriter.java:534)
-	com.google.gson.stream.JsonWriter.writeDeferredName(JsonWriter.java:402)
-	com.google.gson.stream.JsonWriter.nullValue(JsonWriter.java:431)
-	com.google.gson.stream.JsonWriter.value(JsonWriter.java:415)
-	com.google.gson.internal.bind.TypeAdapters$13.write(TypeAdapters.java:362)
-	com.google.gson.internal.bind.TypeAdapters$13.write(TypeAdapters.java:346)
-	com.google.gson.internal.bind.TypeAdapterRuntimeTypeWrapper.write(TypeAdapterRuntimeTypeWrapper.java:68)
-	com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$1.write(ReflectiveTypeAdapterFactory.java:89)
-	com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.write(ReflectiveTypeAdapterFactory.java:195)
-	com.google.gson.internal.bind.TypeAdapterRuntimeTypeWrapper.write(TypeAdapterRuntimeTypeWrapper.java:68)
-	com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$1.write(ReflectiveTypeAdapterFactory.java:89)
+	type Exception report
+	message org.apache.cxf.interceptor.Fault
+	description The server encountered an internal error (org.apache.cxf.interceptor.Fault) that prevented it from fulfilling this request.
+	exception
+	java.lang.RuntimeException: org.apache.cxf.interceptor.Fault
+		...
+	root cause
+	org.apache.cxf.interceptor.Fault
+		...
+	root cause
+	java.lang.StackOverflowError
+		java.lang.System.arraycopy(Native Method)
+		java.lang.String.getChars(String.java:854)
+		java.lang.AbstractStringBuilder.append(AbstractStringBuilder.java:391)
+		java.lang.StringBuffer.append(StringBuffer.java:224)
+		java.io.StringWriter.write(StringWriter.java:84)
+		com.google.gson.stream.JsonWriter.string(JsonWriter.java:534)
+		com.google.gson.stream.JsonWriter.writeDeferredName(JsonWriter.java:402)
+		com.google.gson.stream.JsonWriter.nullValue(JsonWriter.java:431)
+		com.google.gson.stream.JsonWriter.value(JsonWriter.java:415)
+		com.google.gson.internal.bind.TypeAdapters$13.write(TypeAdapters.java:362)
+		com.google.gson.internal.bind.TypeAdapters$13.write(TypeAdapters.java:346)
+		com.google.gson.internal.bind.TypeAdapterRuntimeTypeWrapper.write(TypeAdapterRuntimeTypeWrapper.java:68)
+		com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$1.write(ReflectiveTypeAdapterFactory.java:89)
+		com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.write(ReflectiveTypeAdapterFactory.java:195)
+		com.google.gson.internal.bind.TypeAdapterRuntimeTypeWrapper.write(TypeAdapterRuntimeTypeWrapper.java:68)
+		com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$1.write(ReflectiveTypeAdapterFactory.java:89)
 	com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.write(ReflectiveTypeAdapterFactory.java:195)
 ```
 
@@ -51,24 +51,24 @@ java.lang.StackOverflowError
 cxf-rt-core:AbstractInvoker.java
 
 ```java
- protected Object invoke(Exchange exchange, final Object serviceObject, Method m, List<Object> params) {
-        Object res;
-        try {
-            Object[] paramArray = new Object[]{};
-            if (params != null) {
-                paramArray = params.toArray();
-            }
-            res = performInvocation(exchange, serviceObject, m, paramArray);
-            if (exchange.isOneWay()) {
-                return null;
-            }
-            return new MessageContentsList(res);
-        } catch (InvocationTargetException e) {
-            Throwable t = e.getCause();
-            if (t == null) {
-                t = e;
-            }
-            // ...
+	protected Object invoke(Exchange exchange, final Object serviceObject, Method m, List<Object> params) {
+		Object res;
+		try {
+			Object[] paramArray = new Object[]{};
+			if (params != null) {
+				paramArray = params.toArray();
+			}
+			res = performInvocation(exchange, serviceObject, m, paramArray);
+			if (exchange.isOneWay()) {
+				return null;
+			}
+			return new MessageContentsList(res);
+		} catch (InvocationTargetException e) {
+			Throwable t = e.getCause();
+			if (t == null) {
+				t = e;
+			}
+			// ...
 		}
 ```
 
@@ -78,70 +78,70 @@ cxf-rt-core:AbstractInvoker.java
 Gson.java
 
 ```java
-  public void toJson(Object src, Type typeOfSrc, JsonWriter writer) throws JsonIOException {
-    TypeAdapter<?> adapter = getAdapter(TypeToken.get(typeOfSrc));
-    boolean oldLenient = writer.isLenient();
-    writer.setLenient(true);
-    boolean oldHtmlSafe = writer.isHtmlSafe();
-    writer.setHtmlSafe(htmlSafe);
-    boolean oldSerializeNulls = writer.getSerializeNulls();
-    writer.setSerializeNulls(serializeNulls);
-    try {
-      ((TypeAdapter<Object>) adapter).write(writer, src);
-    } catch (IOException e) {
-      throw new JsonIOException(e);
-    } finally {
-      writer.setLenient(oldLenient);
-      writer.setHtmlSafe(oldHtmlSafe);
-      writer.setSerializeNulls(oldSerializeNulls);
-    }
-  }
+	public void toJson(Object src, Type typeOfSrc, JsonWriter writer) throws JsonIOException {
+	TypeAdapter<?> adapter = getAdapter(TypeToken.get(typeOfSrc));
+	boolean oldLenient = writer.isLenient();
+	writer.setLenient(true);
+	boolean oldHtmlSafe = writer.isHtmlSafe();
+	writer.setHtmlSafe(htmlSafe);
+	boolean oldSerializeNulls = writer.getSerializeNulls();
+	writer.setSerializeNulls(serializeNulls);
+	try {
+	  ((TypeAdapter<Object>) adapter).write(writer, src);
+	} catch (IOException e) {
+	  throw new JsonIOException(e);
+	} finally {
+	  writer.setLenient(oldLenient);
+	  writer.setHtmlSafe(oldHtmlSafe);
+	  writer.setSerializeNulls(oldSerializeNulls);
+	}
+	}
 ```
 
 在TypeAdapterRuntimeTypeWrapper中一直在循环调用自己类的write方法.
 
 ```java
-package com.google.gson.internal.bind;
-final class TypeAdapterRuntimeTypeWrapper<T> extends TypeAdapter<T>
+	package com.google.gson.internal.bind;
+	final class TypeAdapterRuntimeTypeWrapper<T> extends TypeAdapter<T>
 
- @SuppressWarnings({"rawtypes", "unchecked"})
-  @Override
-  public void write(JsonWriter out, T value) throws IOException {
-    // Order of preference for choosing type adapters
-    // First preference: a type adapter registered for the runtime type
-    // Second preference: a type adapter registered for the declared type
-    // Third preference: reflective type adapter for the runtime type (if it is a sub class of the declared type)
-    // Fourth preference: reflective type adapter for the declared type
+	@SuppressWarnings({"rawtypes", "unchecked"})
+	@Override
+	public void write(JsonWriter out, T value) throws IOException {
+	// Order of preference for choosing type adapters
+	// First preference: a type adapter registered for the runtime type
+	// Second preference: a type adapter registered for the declared type
+	// Third preference: reflective type adapter for the runtime type (if it is a sub class of the declared type)
+	// Fourth preference: reflective type adapter for the declared type
 
-    TypeAdapter chosen = delegate;
-    Type runtimeType = getRuntimeTypeIfMoreSpecific(type, value);
-    if (runtimeType != type) {
-      TypeAdapter runtimeTypeAdapter = context.getAdapter(TypeToken.get(runtimeType));
-      if (!(runtimeTypeAdapter instanceof ReflectiveTypeAdapterFactory.Adapter)) {
-        // The user registered a type adapter for the runtime type, so we will use that
-        chosen = runtimeTypeAdapter;
-      } else if (!(delegate instanceof ReflectiveTypeAdapterFactory.Adapter)) {
-        // The user registered a type adapter for Base class, so we prefer it over the
-        // reflective type adapter for the runtime type
-        chosen = delegate;
-      } else {
-        // Use the type adapter for runtime type
-        chosen = runtimeTypeAdapter;
-      }
-    }
-    chosen.write(out, value);
-  }
+	TypeAdapter chosen = delegate;
+	Type runtimeType = getRuntimeTypeIfMoreSpecific(type, value);
+	if (runtimeType != type) {
+	  TypeAdapter runtimeTypeAdapter = context.getAdapter(TypeToken.get(runtimeType));
+	  if (!(runtimeTypeAdapter instanceof ReflectiveTypeAdapterFactory.Adapter)) {
+		// The user registered a type adapter for the runtime type, so we will use that
+		chosen = runtimeTypeAdapter;
+	  } else if (!(delegate instanceof ReflectiveTypeAdapterFactory.Adapter)) {
+		// The user registered a type adapter for Base class, so we prefer it over the
+		// reflective type adapter for the runtime type
+		chosen = delegate;
+	  } else {
+		// Use the type adapter for runtime type
+		chosen = runtimeTypeAdapter;
+	  }
+	}
+	chosen.write(out, value);
+	}
 ```
 
 #####4.测试
 不就是这么个对象么，为什么会使gson陷入循环呢？难道是gson的Bug?自己构建个对象来toJson试试.
 
 ```java
-RespObj obj = new RespObj();
-obj.setCode("10199");
-obj.setType("PARAMETEREXCEPTION");
-obj.setMessage("java.lang.NullPointerException");
-new Gson().toJson(obj);
+	RespObj obj = new RespObj();
+	obj.setCode("10199");
+	obj.setType("PARAMETEREXCEPTION");
+	obj.setMessage("java.lang.NullPointerException");
+	new Gson().toJson(obj);
 ```
 
 自己构造了这个对象，调用gson并没有异常呢。
@@ -154,7 +154,7 @@ new Gson().toJson(obj);
 这么做就会看到给异常了：
 
 ```java
-new Gson().toJson(new NullPointerException());
+	new Gson().toJson(new NullPointerException());
 ```
 
 #####6.关于异常处理结论
