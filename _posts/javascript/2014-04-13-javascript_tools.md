@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "javascript基础工具清单"
-tagline: "javascript基础工具清单"
+title: "javascript基础工具清单(译)"
+tagline: "javascript基础工具清单(译)"
 description: "badnotes,萬軍的个人网站，记录生活旅行代码。javascript基础工具清单。"
 category: JavaScript
 tags: JavaScript Tools
