@@ -11,7 +11,7 @@ tags: Java Regexp
 
 提取出网页中的__VIEWSTATE
 
-	String html = "<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="jGNjNeEiiu5V3nFyg3edj77IIl5u5I54SG7m+S" />;
+	String html = "<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="jGNjNeEiiu5V3nFyg3edj77IIl5u5I54SG7m+S\" />";
 	Pattern pattern = Pattern.compile("id=\"__VIEWSTATE\" value=\"(\\S*)\"");
 	Matcher matcher = pattern.matcher(html);
 	if(matcher.find()){ // 这里只用了一次匹配,多次匹配用while
