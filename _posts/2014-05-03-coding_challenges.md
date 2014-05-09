@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "编程挑战有助于训练大脑"
-tagline: "编程挑战有助于训练大脑"
-description: "badnotes,萬軍的个人网站，记录生活旅行代码.编程挑战有助于训练大脑."
+title: "编程挑战有助于训练大脑(译)"
+tagline: "编程挑战有助于训练大脑(译)"
+description: "badnotes,萬軍的个人网站，记录生活旅行代码.编程挑战有助于训练大脑(译)."
 category: Program
 tags: [Program]
 ---
