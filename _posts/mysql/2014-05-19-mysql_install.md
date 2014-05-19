@@ -4,7 +4,7 @@ title: "Linux 下安装 mysql 需要做些什么"
 tagline: "Linux 下安装 mysql 需要做些什么"
 description: "badnotes,萬軍的个人网站，记录生活旅行代码。Linux 下安装 mysql 需要做些什么。"
 category: Mysql
-tags: [mysql]
+tags: [Mysql]
 ---
 {% include JB/setup %}
 
