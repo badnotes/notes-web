@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Sublime Text 12个最想要的文本提示和技巧(译)"
-tagline: "Sublime Text 12个最想要的文本提示和技巧(译)"
-description: "badnotes,萬軍的个人网站，记录生活旅行代码。Sublime Text 12个最想要的文本提示和技巧(译)."
+title: "12种高效的Sublime Text技巧(译)"
+tagline: "12种高效的Sublime Text技巧(译)"
+description: "badnotes,萬軍的个人网站，记录生活旅行代码。12种高效的Sublime Text技巧(译)."
 category: Tools
 tags: [Tools]
 ---
