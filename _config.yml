@@ -6,7 +6,7 @@ permalink: /:year/:month/:day/:title
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 pygments: false
 markdown: kramdown
-paginate: 6
+paginate: 16
 description_length: 200
 
 # Themes are encouraged to use these universal variables

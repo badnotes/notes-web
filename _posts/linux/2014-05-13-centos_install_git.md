@@ -3,8 +3,8 @@ layout: post
 title: "Cent OS install git"
 tagline: "Cent OS install git"
 description: "badnotes,萬軍的个人网站，记录生活旅行代码。Cent OS install git。"
-category: 
-tags: []
+category: Git
+tags: [git]
 ---
 {% include JB/setup %}
 

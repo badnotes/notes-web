@@ -3,6 +3,19 @@ body {
     background-color: #eee;
 }
 
+.light_color {
+    color: #aaa;
+}
+.light_color a:link{
+    color:#aaa;
+    text-decoration:none;
+}
+
+.light_color a:hover{
+    color:#005580;
+    text-decoration:none;
+}
+
 .left {
     width: 70.468% !important;
 }
@@ -63,7 +76,7 @@ body {
 
 .main-container {
     background-color: #fff;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
 
     border-radius: 5px;
     -webkit-border-radius: 5px;
