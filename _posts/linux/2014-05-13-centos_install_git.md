@@ -4,7 +4,7 @@ title: "Cent OS install git"
 tagline: "Cent OS install git"
 description: "badnotes,萬軍的个人网站，记录生活旅行代码。Cent OS install git。"
 category: Git
-tags: [git]
+tags: [Git]
 ---
 {% include JB/setup %}
 

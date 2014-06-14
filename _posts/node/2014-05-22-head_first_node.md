@@ -4,7 +4,7 @@ title: "深入浅出Nodejs 笔记"
 tagline: "深入浅出Nodejs 笔记"
 description: "badnotes,萬軍的个人网站，记录生活旅行代码。深入浅出Nodejs 笔记。"
 category: Node
-tags: [Node]
+tags: Node Book
 ---
 {% include JB/setup %}
 

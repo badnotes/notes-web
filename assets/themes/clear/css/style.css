@@ -16,6 +16,11 @@ body {
     text-decoration:none;
 }
 
+.light_color a:visited{
+    color:#005580;
+    text-decoration:none;
+}
+
 .left {
     width: 70.468% !important;
 }
