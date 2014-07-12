@@ -1,11 +1,13 @@
 ---
 layout: post
 title: "ubuntu下emacs 安装与配置"
-description: "ubuntu下emacs 安装与配置"
+tagline: "ubuntu下emacs 安装与配置"
+description: "badnotes,萬軍的个人网站，记录生活旅行代码。ubuntu下emacs 安装与配置"
 category: Tools
 tags: Tools Emacs
 ---
 {% include JB/setup %}
+
 
 ubuntu下emacs 安装与配置
 
