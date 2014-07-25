@@ -84,7 +84,7 @@ tags: Java Cache
 * CacheLoader.reload(K, V) 生成新的value过程中允许使用旧的value
 * CacheBuilder.refreshAfterWrite(long, TimeUnit) 自动刷新cache
 
-设置自动清除过期cache，到期的缓存会自动被清除掉
+设置自动清除cache，可将未过期的cache清除，到期的缓存会自动被清除掉
 
 * Cache.invalidate(key)
 * Cache.invalidateAll(keys)
