@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "如何让python更快的运行"
-tagline: "如何让python更快的运行"
-description: "badnotes,萬軍的个人网站，记录生活旅行代码。如何让python更快的运行"
+title: "如何让Python更快的运行"
+tagline: "如何让Python更快的运行"
+description: "badnotes,萬軍的个人网站，记录生活旅行代码。如何让Python更快的运行"
 category: Python
 tags: [Python]
 ---
