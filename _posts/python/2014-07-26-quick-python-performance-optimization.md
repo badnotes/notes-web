@@ -14,7 +14,6 @@ Python可能是最容易实现你的想法的语言,但很难构建出最优的�
 
 1. 在 Ipython 的交互shell下可以在每行前面加上 %timeit 或者 %prun(cProfile)
 -- 可以跟踪你的代码运行情况，找出瓶颈出现在哪里。这只是初步优化,而并非深入优化整个系统。
-
  - 深入优化python性能,你应该看看 [python性能分析](http://www.huyng.com/posts/python-performance-analysis/)
  - 另一个有趣的库 [line_profiler](https://bitbucket.org/robertkern/line_profiler)，可以逐行检测性能
 
