@@ -13,19 +13,16 @@ Python可能是最容易实现你的想法的语言,但很难构建出最优的�
 我们在日常使用python编程做一些简单的事情是非常合适的,但是一些小程序如果不是有意去优化可能就不会去改善了，所以在写这样的小东西时就应该尽量的把性能考虑在内。
 
 1. 在 Ipython 的交互shell下可以在每行前面加上 %timeit 或者 %prun(cProfile)
+-- 可以跟踪你的代码运行情况，找出瓶颈出现在哪里。这只是初步优化,而并非深入优化整个系统。
 
- 可以跟踪你的代码运行情况，找出瓶颈出现在哪里。这只是初步优化,而并非深入优化整个系统。
-
-	- 深入优化python性能,你应该看看 [python性能分析](http://www.huyng.com/posts/python-performance-analysis/)
-	- 另一个有趣的库 [line_profiler](https://bitbucket.org/robertkern/line_profiler)，可以逐行检测性能
+ - 深入优化python性能,你应该看看 [python性能分析](http://www.huyng.com/posts/python-performance-analysis/)
+ - 另一个有趣的库 [line_profiler](https://bitbucket.org/robertkern/line_profiler)，可以逐行检测性能
 
 2. 减少函数调用的次数
-
- 如果你需要操作一个列表,你应该将整个列表传入函数，而不是遍历列表时把每个元素传递给函数并返回结果。
+-- 如果你需要操作一个列表,你应该将整个列表传入函数，而不是遍历列表时把每个元素传递给函数并返回结果。
 
 3. 使用 xrange 而不是 range (在python2.x中这样做，因为3.x默认就是这样的)
-
- xrange是用C实现的,有利于更高效的使用内存
+-- xrange是用C实现的,有利于更高效的使用内存
 
 4. 数据量大时，使用 numpy, 比标准的数据结构更好
 
@@ -34,28 +31,23 @@ Python可能是最容易实现你的想法的语言,但很难构建出最优的�
 6. while 1 比 while True 更快
 
 7. list 解析 > for loop > while loop
-
- 使用列表解析会快于其他的loop循环，while使用了外部计算器，以至于它非常的慢。
+-- 使用列表解析会快于其他的loop循环，while使用了外部计算器，以至于它非常的慢。
 
 8. 使用 cProfile, cStringIO 和 cPickle
-
- 始终使用合适的C版本的模块
+-- 始终使用合适的C版本的模块
 
 9. 使用局部变量
-
- 局部变量快于全局变量,内置变量或属性查找
+-- 局部变量快于全局变量,内置变量或属性查找
 
 10. 迭代器优于列表循环 - 迭代器能够有效使用内存并很好扩展, 可使用 itertools 模块
-
- 尽量创建生成器和yeild结合使用(这不是闭包么),这比用通常的list来处理更快。
+-- 尽量创建生成器和yeild结合使用(这不是闭包么),这比用通常的list来处理更快。
 
 11. 尽可能的在任何地方使用 Map,Reduce和Filter而不是for循环.
 
 12. 判断a是否属于b,dict或set 比list或tuple好
 
 13. 处理大量数据时，尽可能的用不变的数据类型，这会快于tuple，更比list快
-
- 因为可变的数据类型容量不足时，会重新分配更多的内存。
+-- 因为可变的数据类型容量不足时，会重新分配更多的内存。
 
 14. 插入数据到list的复杂度是 O(n)
 
