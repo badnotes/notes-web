@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "vim 常用命令"
-tagline: "vim 常用命令"
+title: "Vim 常用命令"
+tagline: "Vim 常用命令"
 description: "badnotes,萬軍的个人网站，记录生活旅行代码。vim 常用命令"
 category: 
 tags: [Vim]
