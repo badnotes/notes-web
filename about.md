@@ -11,7 +11,7 @@ group: "navigation"
 
 **name**: 萬軍
 
-**nick**: xinge(兴哥)
+**nick**: John
 
 **info**: 读书，骑行，写代码
 
