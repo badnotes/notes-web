@@ -32,7 +32,7 @@ tags: [Vim]
 	make && sudo make install
 	
 
-其中 `--with-lua-prefix` 是用brew安装的luajit的目录
+其中 `--with-lua-prefix` 是用brew安装的luajit的目录,如果是 Ubuntu 下 apt-get 安装的话,则应为 /usr/local
 
 
 #### 相关连接:
