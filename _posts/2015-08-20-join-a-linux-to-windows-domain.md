@@ -13,9 +13,8 @@ For join to windows domain using linux, we will install likewise-open or pbis-op
 
 ##### 1. download pbis-open
 
-
-	http://download1.beyondtrust.com/Technical-Support/Downloads/PowerBroker-Identity-Services-Open-Edition/?Pass=True
-
+download at:
+http://download1.beyondtrust.com/Technical-Support/Downloads/PowerBroker-Identity-Services-Open-Edition/?Pass=True
 
 
 ##### 2. install it
@@ -31,7 +30,6 @@ For join to windows domain using linux, we will install likewise-open or pbis-op
 
 
 contents:
-
 	# =========================================
 	[Unit]
 	Description=BeyondTrust PBIS Service Manager
@@ -67,9 +65,9 @@ make the service start at boot system ```> systemctl enable lwsmd.service```
 ##### 5. join to domain
 
 
-	> sudo domainjoin-cli query
+```> sudo domainjoin-cli query```
 
-	> sudo domainjoin-cli join --disable ssh domainname.com administrator
+```> sudo domainjoin-cli join --disable ssh domainname.com administrator```
 
 
 ##### 6. copy before user home files to domain user home 
