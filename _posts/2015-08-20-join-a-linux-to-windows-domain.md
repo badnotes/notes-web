@@ -13,9 +13,9 @@ For join to windows domain using linux, we will install likewise-open or pbis-op
 
 ##### 1. download pbis-open
 
-```
-http://download1.beyondtrust.com/Technical-Support/Downloads/PowerBroker-Identity-Services-Open-Edition/?Pass=True
-```
+
+	http://download1.beyondtrust.com/Technical-Support/Downloads/PowerBroker-Identity-Services-Open-Edition/?Pass=True
+
 
 
 ##### 2. install it
@@ -32,30 +32,28 @@ http://download1.beyondtrust.com/Technical-Support/Downloads/PowerBroker-Identit
 
 contents:
 
-```
-# =========================================
-[Unit]
-Description=BeyondTrust PBIS Service Manager
-After=network.target
+	# =========================================
+	[Unit]
+	Description=BeyondTrust PBIS Service Manager
+	After=network.target
 
-[Service]
-Type=forking
-EnvironmentFile=/opt/pbis/libexec/init-base.sh
-ExecStart=/opt/pbis/sbin/lwsmd --start-as-daemon
-ExecReload=/opt/pbis/bin/lwsm refresh
-ExecStop=/opt/pbis/bin/lwsm shutdown
-# We want systemd to give lwsmd some time to finish gracefully, but still want
-# it to kill lwsmd after TimeoutStopSec if something went wrong during the
-# graceful stop. Normally, Systemd sends SIGTERM signal right after the
-# ExecStop, which would kill lwsmd. We are sending useless SIGCONT here to give
-# lwsmd time to finish.
-KillSignal=SIGCONT
-PrivateTmp=true
+	[Service]
+	Type=forking
+	EnvironmentFile=/opt/pbis/libexec/init-base.sh
+	ExecStart=/opt/pbis/sbin/lwsmd --start-as-daemon
+	ExecReload=/opt/pbis/bin/lwsm refresh
+	ExecStop=/opt/pbis/bin/lwsm shutdown
+	# We want systemd to give lwsmd some time to finish gracefully, but still want
+	# it to kill lwsmd after TimeoutStopSec if something went wrong during the
+	# graceful stop. Normally, Systemd sends SIGTERM signal right after the
+	# ExecStop, which would kill lwsmd. We are sending useless SIGCONT here to give
+	# lwsmd time to finish.
+	KillSignal=SIGCONT
+	PrivateTmp=true
 
-[Install]
-WantedBy=multi-user.target nss-lookup.target
-# ===========================================
-```
+	[Install]
+	WantedBy=multi-user.target nss-lookup.target
+	# ===========================================
 
 ##### 4. start lwsmd
 
@@ -68,11 +66,11 @@ make the service start at boot system ```> systemctl enable lwsmd.service```
 
 ##### 5. join to domain
 
-```
-> sudo domainjoin-cli query
 
-> sudo domainjoin-cli join --disable ssh domainname.com administrator
-```
+	> sudo domainjoin-cli query
+
+	> sudo domainjoin-cli join --disable ssh domainname.com administrator
+
 
 ##### 6. copy before user home files to domain user home 
 
