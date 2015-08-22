@@ -55,11 +55,11 @@ body {
 
 .thepost a {
     padding-right: 13px;
-    background: url(../img/link.gif) no-repeat right -2px;
+    /*background: url(../img/link.gif) no-repeat right -2px;*/
 }
 
 .thepost a:hover {
-    background: url(../img/link.gif) no-repeat right -19px;
+    /*background: url(../img/link.gif) no-repeat right -19px;*/
 }
 
 .page-header {
