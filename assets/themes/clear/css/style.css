@@ -48,6 +48,11 @@ body {
     clear: none;
 }
 
+.thepost {
+    padding: 10px 25px;
+    margin: 5px;
+}
+
 .thepost a {
     padding-right: 13px;
     background: url(../img/link.gif) no-repeat right -2px;
