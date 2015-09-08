@@ -9,13 +9,15 @@ tags: [Tools]
 {% include JB/setup %}
 
 
+##### install putty-tools
 
-* sudo apt-get install putty-tools
+`sudo apt-get install putty-tools`
+
+##### convert
+
+`puttygen id_dsa.ppk -O private-openssh -o id_dsa`
 
 
-* puttygen id_dsa.ppk -O private-openssh -o id_dsa
-
-
-* links:
+##### links:
 
 [How to convert .ppk key to OpenSSH key under Linux](http://superuser.com/questions/232362/how-to-convert-ppk-key-to-openssh-key-under-linux)
