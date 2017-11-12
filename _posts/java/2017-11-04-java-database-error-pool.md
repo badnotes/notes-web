@@ -38,7 +38,7 @@ java.sql.SQLException: Timed out waiting for a free available connection.
 面对这种情况,首先想到是不是后面数据库挂掉了.赶紧检查,一切正常。
 然后查看访问日志，是否有大量的访问请求，超过了程序或者数据库的处理能力呢。查看后仍然并没有过多的访问请求。那就多半是程序上的bug了,需要查看堆栈信息分析了。
 
-#### 2. 线程栈
+#### 3. 线程栈
 
 
 `jstack pid > js.log` 
@@ -62,7 +62,7 @@ java.sql.SQLException: Timed out waiting for a free available connection.
 ```
 
 
-#### 3. 原因
+#### 4. 原因
 
 可以看到堆栈里有3个如上的等待线程。正好对应了数据库连接池BoneCP配置的3个分区
 
