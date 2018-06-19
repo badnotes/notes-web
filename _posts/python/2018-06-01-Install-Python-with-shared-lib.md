@@ -19,24 +19,29 @@ Install Python with shared lib
 
 #### 1. Python 源码
 
+```
 tar jvzf Python-3.6.tar.bz2
 cd Python-3.6
 ./configure --enable-shared [--prefix=/your/custom/installation/path]
 make
 make test
 make install
+```
 
 #### 2. conda包
 
+```
 wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
 bash Miniconda3-latest-Linux-x86_64.sh
 ...
+```
 
 #### 3. Pyenv环境管理
 
 (1).  pyenv python
 ```
-env PYTHON_CONFIGURE_OPTS="--enable-shared" LD_LIBRARY_PATH=~/.pyenv/versions/3.6/lib/ pyenv install -k 3.6
+env PYTHON_CONFIGURE_OPTS="--enable-shared" 
+LD_LIBRARY_PATH=~/.pyenv/versions/3.6/lib/ pyenv install -k 3.6
 ```
 
 (2) pyenv conda
