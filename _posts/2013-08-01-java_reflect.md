@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "java反射之动态代理"
+tagline: "java反射之动态代理"
 description: "badnotes,萬軍的个人网站，记录生活旅行代码。java反射之动态代理"
 category: Java
 tags: Java
@@ -52,7 +53,7 @@ tags: Java
 			System.out.println("after method invoke");
 		}
 		public static void main(String[] args) {
-
+	
 			HelloWorld hw = new HelloWorldImpl();
 			InvocationHandler handler = new HelloWorldHandler(hw);
 			HelloWorld proxy = (HelloWorld) Proxy.newProxyInstance(hw.getClass().getClassLoader(),hw.getClass().getInterfaces(),handler);

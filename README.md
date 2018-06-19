@@ -2,7 +2,7 @@
 
 A static blog built with [Jekyll-BootStrap][] on github pages
 
-**badnotes.com** is my domain.
+**http://badnotes.github.io** is my domain.
 
 ## Function that has been realized
 
