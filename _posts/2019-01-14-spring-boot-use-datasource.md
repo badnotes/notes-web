@@ -91,5 +91,4 @@ public class HikariDataSource extends HikariConfig implements DataSource, Closea
 
 > ​	HikariCP comes with *sane* defaults that perform well in most deployments without additional tweaking. **Every property is optional, except for the "essentials" marked below.**
 >
-> [HikariCP#Configruration]: https://github.com/brettwooldridge/HikariCP#configuration-knobs-baby
-
+> [HikariCP#Configruration]: https://github.com/brettwooldridge/HikariCP#configuration-knobs-baby	"HikariCP Configuration"
