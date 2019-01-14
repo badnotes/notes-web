@@ -9,6 +9,9 @@ tags: [Spring]
 {% include JB/setup %}
 
 
+Spring boot Use Datasource
+---------------------------------
+
 #### 1. 数据源配置
 
 ```properties
