@@ -1,5 +1,12 @@
-## Spring boot Use Datasource
-
+---
+layout: post
+title: "Spring boot Use Datasource"
+tagline: "Spring boot Use Datasource"
+description: "badnotes,萬軍的个人网站，记录生活旅行代码。Spring boot Use Datasource"
+category: Spring
+tags: [Spring]
+---
+{% include JB/setup %}
 
 
 #### 1. 数据源配置
