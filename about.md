@@ -9,9 +9,7 @@ group: "navigation"
 
 ### about me
 
-**name**: 萬軍
-
-**nick**: John
+**name**:  J.W
 
 **info**: 读书，骑行，写代码
 
