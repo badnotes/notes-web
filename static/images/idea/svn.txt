@@ -1,6 +1,0 @@
-3 创建一个新的Subversion项目。
-只需执行： svnadmin create D:\repository\subversion\projectname
-5 向Subversion中导入项目：现在我们需要将项目导入到Subversion的库中，只需执行一下命令： svn import d:\projectname svn://localhost/projectname -m "initial import" --username admin --password mypassword
-这样项目就导入到subversion库中啦。
-6 将项目导出：从Subversion项目中导出项目也很简单，只需执行以下操作：
-svn co svn://localhost/projectname --username admin --password mypassword
